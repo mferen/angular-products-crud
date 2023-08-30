@@ -6,6 +6,21 @@
   Simple products project build with Angular 9
 </h3>
 
+```
+cd backend && docker build -t productbackend:1.0.0 .
+cd frontend && docker build -t productfrontend:1.0.0 .
+
+docker run -d --name productbackendapp -p 3001:3001 productbackend:1.0.0
+docker run --name productfrontendapp -p 4200:4200 -d productfrontend:1.0.0
+
+#for docker compose
+docker compose up -d
+
+# for docker compose without image
+docker compose -f docker-compose-without-image.yaml up --build -d
+
+```
+
 <p align="center">
   <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/eltonlazzarin/angular-products-crud">
 

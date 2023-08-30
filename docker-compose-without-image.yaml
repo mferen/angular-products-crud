@@ -1,0 +1,13 @@
+services:
+  productbackendapp: 
+    build:
+      context: backend
+    container_name: productbackendapp
+    ports: 
+      - '3001:3001'
+  productfrontendapp:
+    build:
+      context: frontend
+    container_name: productfrontendapp
+    ports: 
+      - '4200:4200'
