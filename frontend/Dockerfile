@@ -2,6 +2,7 @@ FROM node:16.20.2-buster AS build
 WORKDIR app
 COPY . .
 RUN yarn install
+RUN ng run frontend:collect-vars
 RUN yarn build
 
 FROM nginx:latest
