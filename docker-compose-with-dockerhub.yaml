@@ -1,7 +1,7 @@
 services:
   productbackendapp: 
     container_name: productbackendapp
-    image:  mferen03/mycrudbackenddapp:1.0.0
+    image:  mferen03/mycrudbackendapp:1.0.0
     ports: 
       - '3001:3001'
   productfrontendapp:
