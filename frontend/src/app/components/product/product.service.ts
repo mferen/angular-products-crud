@@ -10,7 +10,7 @@ import { environment } from '../../../environments/environment';
   providedIn: "root",
 })
 export class ProductService {
-  baseUrl = environment.API_URL + "/products";
+  baseUrl = environment.envVar.API_URL + "/products";
 
 
   constructor(private snackBar: MatSnackBar, private http: HttpClient) {}
